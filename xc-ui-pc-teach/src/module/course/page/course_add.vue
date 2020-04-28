@@ -111,7 +111,7 @@
 
             });
 
-            //查询数据字典...
+            //查询数据字典
             //查询课程等级
             systemApi.sys_Dictionary('200').then(res => {
                 debugger
