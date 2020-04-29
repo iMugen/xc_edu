@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <el-menu
       :default-active="activeIndex"
       active-text-color="#000"
@@ -9,7 +8,7 @@
       mode="horizontal"
       text-color="#000">
       <router-link :to="{path:'/course/manage/summary/'+this.courseid}" class="mui-tab-item">
-        <el-menu-item index="1" >课程首页</el-menu-item>
+        <el-menu-item index="1">课程首页</el-menu-item>
       </router-link>
       <router-link :to="{path:'/course/manage/baseinfo/'+this.courseid}" class="mui-tab-item">
         <el-menu-item index="2">基本信息</el-menu-item>
@@ -43,18 +42,13 @@
         },
         methods: {},
         mounted() {
-
             //课程id
             this.courseid = this.$route.params.courseid
-
             console.log("courseid=" + this.courseid)
             //跳转到课程基本信息
             this.$router.push({path: '/course/manage/baseinfo/' + this.courseid})
-
         }
     }
 </script>
 <style scoped>
-
-
 </style>

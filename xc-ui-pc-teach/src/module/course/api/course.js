@@ -55,14 +55,17 @@ export const publish = id => {
   return http.requestPost(apiUrl + '/course/publish/' + id);
 };
 
-//查询课程信息
-export const findCourseView = courseId => {
-  return http.requestQuickGet(apiUrl + '/course/courseview/' + courseId)
-};
-
 /*保存媒资信息*/
 export const savemedia = teachplanMedia => {
   return http.requestPost(apiUrl + '/course/savemedia', teachplanMedia);
 };
 
+//查询课程基本信息
+export const getCourseBaseById = (courseId) => {
+  return http.requestQuickGet(apiUrl + '/course/coursebase/get/' + courseId)
+};
 
+//更新课程基本信息
+export const updateCoursebase = (courseId, courseForm) => {
+  return http.requestPut(apiUrl + '/course/coursebase/update/' + courseId,courseForm);
+};

@@ -86,11 +86,11 @@
             save() {
                 //处理课程分类
                 // 选择课程分类存储到categoryActive
-                this.courseForm.mt = this.categoryActive[0]//大分类
-                this.courseForm.st = this.categoryActive[1]//小分类
+                this.courseForm.mt = this.categoryActive[0];//大分类
+                this.courseForm.st = this.categoryActive[1];//小分类
                 courseApi.addCourseBase(this.courseForm).then(res => {
                     if (res.success) {
-                        this.$message.success("提交成功")
+                        this.$message.success("提交成功");
                         //跳转到我的课程
                         this.$router.push({path: '/course/list'})
                     } else {
