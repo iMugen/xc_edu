@@ -69,3 +69,4 @@ export const getCourseBaseById = (courseId) => {
 export const updateCoursebase = (courseId, courseForm) => {
   return http.requestPut(apiUrl + '/course/coursebase/update/' + courseId,courseForm);
 };
+
